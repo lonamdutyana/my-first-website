@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Twenty One Pilots</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <style media="screen">
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffc107; /* Highlight color on hover */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #007bff; /* Social media icon color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Twenty One Pilots</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'user_auth:index' %}">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_auth:about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_auth:contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>
+                For inquiries, you can reach out to Twenty One Pilots through the following contact details:
+            </p>
+            <ul>
+                <li>Email: <a href="mailto:info@twentyonepilots.com">info@twentyonepilots.com</a></li>
+                <li>Phone: +1 (555) 123-4567</li>
+                <li>Address: 123 Music Lane, Columbus, Ohio, 43210</li>
+            </ul>
+            <p>
+                Feel free to get in touch with any questions or feedback. The band appreciates the support from their fans!
+            </p>
+
+            <!-- Social Media Icons -->
+            <ul class="social-icons">
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+    </main>
+
+    <footer class="text-white bg-dark p-0 fixed-bottom">
+        &copy; 2024 Twenty One Pilots. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap JS (optional, if you need dropdowns, modals, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twenty One Pilots</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Stylesheet-->
+    <style media="screen">
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .band-info img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .band-description {
+            max-width: 600px;
+        }
+
+        .what-they-do {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Twenty One Pilots</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'user_auth:index' %}">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_auth:about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_auth:contact' %}">Contact</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_auth:logout' %}">Logout</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="band-info row">
+            <div class="col-md-4">
+                <img src="https://www.billboard.com/wp-content/uploads/2021/06/Twenty-One-Pilots-iheart-awards-2021-billboard-1548-1623856985.jpg" alt="Twenty One Pilots Image 1">
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.rollingstone.com/wp-content/uploads/2018/09/21-pilots-press.jpg" alt="Twenty One Pilots Image 2">
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.billboard.com/wp-content/uploads/media/twenty-one-pilots-performance-sept-2016-billboard-1548.jpg" alt="Twenty One Pilots Image 3">
+            </div>
+            <div class="band-description col-md-12">
+                <h2>Welcome to the Twenty One Pilots Membership: Elevate Your Fandom!</h2>
+                <p>
+                    Are you a die-hard Twenty One Pilots fan, constantly finding solace in the depths of their lyrics and captivated by the enigmatic musical journey of Tyler Joseph and Josh Dun? If your answer is a resounding "yes," then it's time to take your devotion to the next level by becoming a cherished member of the Twenty One Pilots Inner Circle!
+                </p>
+                <p>
+                    Why Join the Inner Circle?
+                    Becoming a part of the Inner Circle isn't just a fan club membership; it's an invitation to a world where your love for Twenty One Pilots is celebrated and reciprocated. As a member, you're not just an audience; you're an essential part of the Twenty One Pilots family, and the perks that come with it are designed to enhance your connection with the band and fellow enthusiasts.
+                </p>
+            </div>
+        </div>
+
+        <div class="what-they-do" id="about">
+            <h2>Membership Perks:</h2>
+            <p>
+                1. Early Access to Tickets:
+                Never Miss a Beat: Gain priority access to ticket sales before the general public. This means you get to secure your spot in the audience and witness the magic of Twenty One Pilots live, ensuring you're at the heart of the action.
+
+            </p>
+            <p>
+                2. Exclusive Merchandise:
+                Wear Your Fandom: Show off your Twenty One Pilots pride with exclusive, members-only merchandise. From specially designed apparel to unique collectibles, your membership grants you access to a treasure trove of items that set you apart as a true aficionado.
+
+            </p>
+            <p>
+                3. Behind-the-Scenes Content:
+                Go Beyond the Stage: Dive deep into the creative process with exclusive behind-the-scenes content. From studio sessions that birthed your favorite songs to the highs and lows of life on tour, you'll gain intimate insights into the world of Twenty One Pilots that go beyond what the spotlight reveals.
+            </p>
+            <p>
+                4. Members-Only Events:
+                Create Unforgettable Memories: Attend exclusive events designed just for you. Whether it's a virtual Q&A where you can directly interact with Tyler and Josh, an intimate acoustic performance, or even a chance to meet the band, these events ensure you're an integral part of the Twenty One Pilots journey.
+            </p>
+            <p>
+                5. Community Forums:
+                Connect with Like Minds: Join a vibrant online community where your passion for Twenty One Pilots can flourish. Share your favorite lyrics, discuss the latest album, and connect with fellow members who understand the depth of your love for the band.
+            </p>
+        </div>
+        <div class="band-description col-md-12">
+            <h2>Stay Connected, Stay Involved:</h2>
+            <p>
+                Being a member of the Twenty One Pilots Inner Circle isn't just about enjoying exclusive perks; it's about forging lasting connections within a community that shares your unwavering love for the music. Elevate your Twenty One Pilots experience, and join the Inner Circle today!
+            </p>
+            <p>
+                Note: Membership perks and offerings are subject to change, and availability may vary based on your location.
+            </p>
+        </div>
+            </div>
+
+    </main>
+
+    <footer class="text-white bg-dark p-0 fixed-bottom">
+        &copy; 2024 Twenty One Pilots. All Rights Reserved.
+    </footer>
