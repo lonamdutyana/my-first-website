@@ -8,6 +8,7 @@ from django.http import HttpResponse
 @login_required
 def index(request):
     return render(request, "user_auth/index.html")
+# use login decorater to validate user authentication.
 
 
 def about(request):
