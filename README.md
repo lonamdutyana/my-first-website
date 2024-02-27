@@ -16,7 +16,6 @@ Logout:
 
 Click on the logout button to securely log out of the application.
 You will be redirected to the login page after logging out.
-![Screenshot (450)](https://github.com/lonamdutyana/my-first-website/assets/158799003/30afe21b-34eb-4884-bc78-f7446cd1ca8a)
 
 Credits:
 This application was developed by Lona mdutyana as part of hyperiondev task assessment.
